@@ -1,0 +1,35 @@
+#############################################################################
+# UBSan blacklist.
+# Please think twice before you add or remove these rules.
+
+# This is a stripped down copy of Chromium's blacklist.txt, to enable
+# adding WebRTC-specific blacklist entries.
+
+#############################################################################
+# YASM does some funny things that UBsan doesn't like.
+# https://crbug.com/489901
+src:*/third_party/yasm/*
+
+#############################################################################
+# Ignore system libraries.
+src:*/usr/*
+
+#############################################################################
+# https://bugs.chromium.org/p/webrtc/issues/detail?id=5513
+fun:*FilterBanksTest*CalculateResidualEnergyTester*
+
+#############################################################################
+# The audio processing AGC submodule exhibits a few problems (overflows).
+# https://bugs.chromium.org/p/webrtc/issues/detail?id=5530
+src:*/webrtc/modules/audio_processing/agc/legacy/analog_agc.c
+src:*/webrtc/modules/audio_processing/agc/legacy/digital_agc.c
+
+#############################################################################
+# Ignore errors in common_audio.
+# https://bugs.chromium.org/p/webrtc/issues/detail?id=5486
+src:*/webrtc/common_audio/signal_processing/signal_processing_unittest.cc
+src:*/webrtc/common_audio/signal_processing/resample_by_2_internal.c
+fun:*WebRtcSpl_AddSatW32*
+fun:*WebRtcSpl_SubSatW32*
+fun:*WebRtcSpl_DivW32HiLow*
+fun:*GmmProbability*
