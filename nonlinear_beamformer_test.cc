@@ -77,7 +77,9 @@ int main(int argc, char* argv[]) {
     Interleave(out_buf.channels(), out_buf.num_frames(),
                out_buf.num_channels(), &interleaved[0]);
     FloatToFloatS16(&interleaved[0], interleaved.size(), &interleaved[0]);
-    out_file.WriteSamples(&interleaved[0], interleaved.size());
+    int len1 = interleaved.size();
+    int len2 = in_buf.num_channels();
+    out_file.WriteSamples(&interleaved[0], len1 / len2);
   }
 
   return 0;
