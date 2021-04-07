@@ -158,10 +158,12 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-wav-beamforming_BINARY_DIR:STATIC=/mnt/e/Demo/webrtc/webrtc_aec/wav-beamforming/build
+//wav-beamforming_BINARY_DIR:STATIC=/mnt/e/Demo/webrtc/webrtc_aec/wav-beamforming/build
+wav-beamforming_BINARY_DIR:STATIC=/home/runner/work/webrtc-beamforming/webrtc-beamforming/build
 
 //Value Computed by CMake
-wav-beamforming_SOURCE_DIR:STATIC=/mnt/e/Demo/webrtc/webrtc_aec/wav-beamforming
+//wav-beamforming_SOURCE_DIR:STATIC=/mnt/e/Demo/webrtc/webrtc_aec/wav-beamforming
+wav-beamforming_SOURCE_DIR:STATIC=/home/runner/work/webrtc-beamforming/webrtc-beamforming
 
 
 ########################
@@ -171,7 +173,8 @@ wav-beamforming_SOURCE_DIR:STATIC=/mnt/e/Demo/webrtc/webrtc_aec/wav-beamforming
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
-CMAKE_CACHEFILE_DIR:INTERNAL=/mnt/e/Demo/webrtc/webrtc_aec/wav-beamforming/build
+//CMAKE_CACHEFILE_DIR:INTERNAL=/mnt/e/Demo/webrtc/webrtc_aec/wav-beamforming/build
+CMAKE_CACHEFILE_DIR:INTERNAL=/home/runner/work/webrtc-beamforming/webrtc-beamforming/build
 //Major version of cmake used to create the current loaded cache
 CMAKE_CACHE_MAJOR_VERSION:INTERNAL=3
 //Minor version of cmake used to create the current loaded cache
@@ -228,7 +231,8 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/mnt/e/Demo/webrtc/webrtc_aec/wav-beamforming
+//CMAKE_HOME_DIRECTORY:INTERNAL=/mnt/e/Demo/webrtc/webrtc_aec/wav-beamforming
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/runner/work/webrtc-beamforming/webrtc-beamforming
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER
